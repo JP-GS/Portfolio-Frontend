@@ -1,0 +1,25 @@
+.footer {    
+    background-color: #a1b5cb;
+    padding: 10px;
+    
+}
+p {
+    color: white;
+    font-weight: bold;
+}
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media(max-width: 1024px) {
+    .contenedor-footer {
+        flex-direction: column-reverse;
+    }
+}
+
+
+

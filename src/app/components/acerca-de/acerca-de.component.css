@@ -1,0 +1,65 @@
+.contenedor-acerca-de {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width: 768px) {
+    .contenedor-acerca-de {
+        display:block;
+        text-align: center;
+    }
+}
+
+/* Perfil */
+.perfil {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contenedor-foto{
+    width: 150px;
+    
+}
+    #foto-perfil {        
+        width: 150px;
+        border-radius: 50%;       
+    }
+    @media(min-width: 768px) {
+        #foto-perfil {        
+            width: 100px;        
+        }
+    }
+    
+#nombre {
+    
+    font-size: 30px;
+    font-weight: bold;
+}
+#full-stack {
+    font-size: 18px;
+    color: #858585;
+}
+
+
+/* acerca de */
+h1 {
+    font-weight: 700;
+}
+.descripcion {
+    max-width: 60%;
+    margin: 80px auto 0 auto;      
+}
+@media(max-width: 768px) {
+    .descripcion{
+        margin: 0 auto;
+    }
+}
+.descripcion p {
+    font-size: 18px;
+    color: #858585;
+}
+

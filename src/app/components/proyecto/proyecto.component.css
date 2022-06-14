@@ -1,0 +1,32 @@
+.contenedor {
+    margin: 0;
+    padding: 20px;
+    background-color: #a1b5cb;
+}
+.contenedor-proyectos {
+    width: 80%;
+    margin: 50px auto 10px auto;
+    background-color: #e1e1e1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #858585;
+}
+h1, h2 {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.img-proyecto {
+        border-radius: 5px;
+        margin-bottom: 20px;
+}
+
+@media(min-width: 768px) {
+    .contenedor-text {
+        margin-left: 20px;
+    }
+    
+}
+

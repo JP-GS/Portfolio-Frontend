@@ -1,0 +1,39 @@
+.contenedor {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(max-width: 768px) {
+    .contenedor {    
+        flex-direction: column;
+    }
+}
+
+#logoAP{
+    width: 150px;
+}
+
+img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+@media(max-width: 768px) {
+    img {
+        width: 30px;
+        margin-right: 10px;
+    }
+}
+.boton {
+    display: block;
+    margin: 20px auto;
+    border-width: medium;
+}
+@media(min-width: 768px) {
+    .boton {
+        margin-top: 10px;
+        margin-right: 20px;
+        display: inline;
+    }
+}
