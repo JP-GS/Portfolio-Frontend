@@ -2,36 +2,12 @@
   <h1>Experiencia Laboral</h1>
   <div class="contenedor-exp">
     <ul>
-      <li>
-        <h1>trabajo 1</h1>
-        <h3>años</h3>
+      <li *ngFor="let experiencia of experienciasList">
+        <h1>{{ experiencia.empresa }}</h1>
+        <h3>{{ experiencia.inicio }} - {{ experiencia.fin }}</h3>
+        <p>{{ experiencia.puesto }}</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, sed
-          perferendis nihil inventore distinctio modi eligendi tenetur expedita
-          obcaecati labore. Pariatur similique eaque ad voluptate, saepe sint id
-          dolor sequi!
-        </p>
-      </li>
-
-      <li>
-        <h1>trabajo 2</h1>
-        <h3>años</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, sed
-          perferendis nihil inventore distinctio modi eligendi tenetur expedita
-          obcaecati labore. Pariatur similique eaque ad voluptate, saepe sint id
-          dolor sequi!
-        </p>
-      </li>
-
-      <li>
-        <h1>trabajo 3</h1>
-        <h3>años</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, sed
-          perferendis nihil inventore distinctio modi eligendi tenetur expedita
-          obcaecati labore. Pariatur similique eaque ad voluptate, saepe sint id
-          dolor sequi!
+          {{ experiencia.descripcion }}
         </p>
       </li>
     </ul>
