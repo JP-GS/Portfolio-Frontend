@@ -3,10 +3,14 @@
   <div class="contenedor-exp">
     <ul>
       <li *ngFor="let experiencia of experienciasList">
-        <h1>{{ experiencia.empresa }}</h1>
-        <h3>{{ experiencia.inicio }} - {{ experiencia.fin }}</h3>
-        <p>{{ experiencia.puesto }}</p>
+        <div class="d-flex justify-content-between">
+          <h1 class="text-uppercase fs-3">{{ experiencia.empresa }}</h1>
+          <p class="fs-6">{{ experiencia.inicio }} - {{ experiencia.fin }}</p>
+        </div>
         <p>
+          Puesto: <span class="fw-bolder"> {{ experiencia.puesto }}</span>
+        </p>
+        <p class="fw-light">
           {{ experiencia.descripcion }}
         </p>
       </li>

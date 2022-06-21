@@ -7,6 +7,12 @@
     max-width: 90%;
     margin: 0 auto;
 }
-h1, h3  {
-    display: inline;
+
+li {
+    list-style: none;
+    padding: 25px 0;
+}
+span {
+    font-weight: bolder;
+    text-transform: uppercase;
 }
