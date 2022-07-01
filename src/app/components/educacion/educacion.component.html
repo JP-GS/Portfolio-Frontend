@@ -1,19 +1,31 @@
 <div class="row">
-  <h1>Educación</h1>
-  <div class="contenedor-edu card">
+  <h1 class="mb-5">Educación</h1>
+  <div class="contenedor-edu">
     <ul>
       <li>
-        <h1 class="text-uppercase fs-3">{{ educacion.nombre }}</h1>
-        <div class="d-flex justify-content-between mt-5">
-          <p>
-            Carrera: <span>{{ educacion.carrera }}</span>
-          </p>
-          <p class="fs-6">{{ educacion.inicio }} {{ educacion.fin }}</p>
-        </div>
+        <div
+          class="contenido-edu d-flex align-items-center justify-content-around"
+        >
+          <img
+            [src]="educacion.img"
+            alt="logo escuela"
+            class="img-fluid rounded"
+            width="200px"
+          />
 
-        <p>
-          Título: <span>{{ educacion.titulo }}</span>
-        </p>
+          <div class="mx-5">
+            <h1 class="text-uppercase fs-3 mb-5">{{ educacion.nombre }}</h1>
+            <p>
+              Carrera: <span>{{ educacion.carrera }}</span>
+            </p>
+            <p class="fs-6">
+              años: <span>{{ educacion.inicio }} {{ educacion.fin }}</span>
+            </p>
+            <p>
+              Título: <span>{{ educacion.titulo }}</span>
+            </p>
+          </div>
+        </div>
       </li>
     </ul>
   </div>

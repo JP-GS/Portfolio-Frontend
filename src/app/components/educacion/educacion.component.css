@@ -4,12 +4,12 @@
     margin: 0;    
 }
 .contenedor-edu {    
-        width: 80%;
-        margin: 50px auto 10px auto;
-        background-color: #e1e1e1;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 3px 3px 3px #858585;   
+    width: 100%;
+    margin: 50px auto 10px auto;
+    background-color: #e1e1e1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #858585;
 }
 @media(min-width: 768px) {
     .contenedor-edu {
@@ -19,6 +19,10 @@
 }
 h1{
     text-align: center;
+}
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 li {
