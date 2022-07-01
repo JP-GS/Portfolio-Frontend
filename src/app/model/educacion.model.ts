@@ -1,4 +1,4 @@
-export class educacion {
+export class Educacion {
     id?: Number;
     nombre: String;
     titulo: String;

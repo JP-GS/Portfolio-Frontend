@@ -1,16 +1,28 @@
 .row {
     padding: 20px;
     background-color: #a1b5cb;
-    margin: 0;
+    margin: 0;    
 }
-.contenedor-edu {
-    max-width: 90%;
-    margin: 0 auto;
+.contenedor-edu {    
+        width: 80%;
+        margin: 50px auto 10px auto;
+        background-color: #e1e1e1;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px #858585;   
+}
+@media(min-width: 768px) {
+    .contenedor-edu {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}
+h1{
+    text-align: center;
 }
 
 li {
     list-style: none;
-    padding: 25px 0;
 }
 span {
     font-weight: bolder;

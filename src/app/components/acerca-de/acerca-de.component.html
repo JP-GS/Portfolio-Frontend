@@ -10,19 +10,14 @@
     </div>
 
     <div class="nombre">
-      <p id="nombre">Juan Pablo Gordillo</p>
+      <p id="nombre">{{ persona.nombre }} {{ persona.apellido }}</p>
       <p id="full-stack">Full Stack Developer Jr.</p>
     </div>
   </div>
   <div class="descripcion">
     <span
       ><h1>Acerca de Mí</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae
-        pariatur impedit, similique omnis, adipisci temporibus itaque ipsa,
-        sequi provident quae voluptates dignissimos. Eius aliquam nam nulla
-        assumenda, cum laboriosam velit!
-      </p>
+      <p>{{ persona.descripcion }}}</p>
     </span>
   </div>
 </div>

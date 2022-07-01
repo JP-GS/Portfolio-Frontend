@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
+import { Educacion } from 'src/app/model/educacion.model';
+import { EducacionService } from 'src/app/service/educacion.service';
 
 @Component({
   selector: 'app-educacion',
@@ -7,14 +8,13 @@ import { PortfolioService } from 'src/app/service/portfolio.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-
-  constructor(private datosPortfolio:PortfolioService) { }
-  educacionesList:any;
+  educacion: Educacion = new Educacion("", "", "", "", "", "");
+  constructor(public educacionService: EducacionService) { }
+ 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      // this.educacionesList=data;
-    });
+    this.educacionService.getEducacion().subscribe(data => {
+      this.educacion = data
+    })
   }
 
 }
