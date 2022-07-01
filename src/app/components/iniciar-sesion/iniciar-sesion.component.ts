@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AutenticacionService } from 'src/app/service/autenticacion.service';
+// import { AutenticacionService } from 'src/app/service/autenticacion.service';
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -9,37 +9,37 @@ import { AutenticacionService } from 'src/app/service/autenticacion.service';
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent implements OnInit {
-  form:FormGroup;
-  constructor(private formBuilder: FormBuilder, private autenticacionService: AutenticacionService, private ruta:Router) { 
-    this.form=this.formBuilder.group(
-      {
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(8)]],
-          deviceInfo : this.formBuilder.group({
-            deviceId :["123456"],
-            deviceTipo : ["DEVICE_TYPE_ANDROID"],
-            notificationToken : ["444555666"]
-        })
-      }
-    )
+  // form:FormGroup;
+  constructor() { 
+    // this.form=this.formBuilder.group(
+    //   {
+    //     email: ['', [Validators.required, Validators.email]],
+    //     password: ['', [Validators.required, Validators.minLength(8)]],
+    //       deviceInfo : this.formBuilder.group({
+    //         deviceId :["123456"],
+    //         deviceTipo : ["DEVICE_TYPE_ANDROID"],
+    //         notificationToken : ["444555666"]
+    //     })
+    //   }
+    // )
   }
   
   ngOnInit(): void {    
   }
 
-  get Email() {
-    return this.form.get('email');
-  }
+  // get Email() {
+  //   return this.form.get('email');
+  // }
 
-  get Password() {
-    return this.form.get('password');
-  }
+  // get Password() {
+  //   return this.form.get('password');
+  // }
 
-  onEnviar(event:Event) {
-    event.preventDefault;
-    this.autenticacionService.IniciarSesion(this.form.value).subscribe(data=> {
-      console.log( "DATA" + JSON.stringify(data));
-      this.ruta.navigate(['/home'])
-    })
-  }
+  // onEnviar(event:Event) {
+  //   event.preventDefault;
+  //   this.autenticacionService.IniciarSesion(this.form.value).subscribe(data=> {
+  //     console.log( "DATA" + JSON.stringify(data));
+  //     this.ruta.navigate(['/home'])
+  //   })
+  // }
 }
