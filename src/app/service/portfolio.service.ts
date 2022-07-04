@@ -19,7 +19,7 @@ export class PortfolioService {
   }
 
   public obtenerDatosedu():Observable<Educacion> {
-    return this.http.get<Educacion>(this.UrlEducacion + 'traer/3');
+    return this.http.get<Educacion>(this.UrlEducacion + 'traer');
   }
   
 }

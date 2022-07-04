@@ -8,11 +8,13 @@ import { PortfolioService } from 'src/app/service/portfolio.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacion: Educacion = new Educacion("", "", "", "", "", "");
+  educacionList:any;
+  
   constructor(public portfolioService: PortfolioService) { }
- 
+  
   ngOnInit(): void {
-    this.portfolioService.obtenerDatosedu().subscribe(data => {this.educacion = data})
+    this.portfolioService.obtenerDatosedu().subscribe(data => {this.educacionList = data}); 
+      
   }
 
 }
