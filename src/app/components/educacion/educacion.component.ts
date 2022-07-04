@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion.model';
-import { EducacionService } from 'src/app/service/educacion.service';
+import { PortfolioService } from 'src/app/service/portfolio.service';
 
 @Component({
   selector: 'app-educacion',
@@ -9,12 +9,10 @@ import { EducacionService } from 'src/app/service/educacion.service';
 })
 export class EducacionComponent implements OnInit {
   educacion: Educacion = new Educacion("", "", "", "", "", "");
-  constructor(public educacionService: EducacionService) { }
+  constructor(public portfolioService: PortfolioService) { }
  
   ngOnInit(): void {
-    this.educacionService.getEducacion().subscribe(data => {
-      this.educacion = data
-    })
+    this.portfolioService.obtenerDatosedu().subscribe(data => {this.educacion = data})
   }
 
 }
