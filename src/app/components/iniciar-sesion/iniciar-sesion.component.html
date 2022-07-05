@@ -1,6 +1,8 @@
 <form
   class="vh-100"
   style="background-image: linear-gradient(120deg, #a1c4fd 0%, #2c6e8d 100%)"
+  [formGroup]="form"
+  (ngSubmit)="onEnviar($event)"
 >
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -19,31 +21,45 @@
 
             <div class="form-outline mb-4">
               <input
-                [ngClass]="{}"
+                [ngClass]="{
+                  'is-invalid': Email?.errors && Email?.touched,
+                  'is-valid': !Email?.errors && Email?.touched
+                }"
                 type="email"
                 id="typeEmailX-2"
                 class="form-control form-control-lg"
                 placeholder="Email"
                 formControlName="email"
               />
-              <div>
-                <p>El Email es requerido.</p>
-                <p>El formato del Email debe ser válido.</p>
+              <div *ngIf="Email?.errors && Email?.touched">
+                <p *ngIf="Email?.hasError('required')" class="text-danger">
+                  El Email es requerido.
+                </p>
+                <p *ngIf="Email?.hasError('email')" class="text-danger">
+                  El formato del Email debe ser válido.
+                </p>
               </div>
             </div>
 
             <div class="form-outline mb-4">
               <input
-                [ngClass]="{}"
+                [ngClass]="{
+                  'is-invalid': Password?.errors && Password?.touched,
+                  'is-valid': !Password?.errors && Password?.touched
+                }"
                 type="password"
                 id="typePasswordX-2"
                 class="form-control form-control-lg"
                 placeholder="Contraseña"
                 formControlName="password"
               />
-              <div>
-                <p>La contraseña es requerida.</p>
-                <p>El formato del Email debe ser de 8 o más caracteres.</p>
+              <div *ngIf="Password?.errors && Password?.touched">
+                <p *ngIf="Password?.hasError('required')" class="text-danger">
+                  La contraseña es requerida.
+                </p>
+                <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+                  El formato del Email debe ser de 8 o más caracteres.
+                </p>
               </div>
             </div>
 
