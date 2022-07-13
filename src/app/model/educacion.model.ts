@@ -1,14 +1,14 @@
 export class Educacion {
     id?: Number;
-    nombre: String;
-    titulo: String;
-    img: String;
-    carrera: String;
-    inicio: String;
-    fin: String;
+    nombre: string;
+    titulo: string;
+    img: string;
+    carrera: string;
+    inicio: string;
+    fin: string;
     
 
-    constructor(nombre: String, titulo: String, img: String, carrera: String, inicio: String, fin: String ) {
+    constructor(nombre: string, titulo: string, img: string, carrera: string, inicio: string, fin: string ) {
         this.nombre = nombre;
         this.titulo = titulo;
         this.img = img;
