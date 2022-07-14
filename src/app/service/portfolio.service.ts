@@ -15,7 +15,7 @@ export class PortfolioService {
   constructor(private http:HttpClient) { }
 
   public obtenerDatosPersona():Observable<Persona> {
-    return this.http.get<Persona>(this.UrlPersona + 'traer/5');    
+    return this.http.get<Persona>(this.UrlPersona + 'traer/1');    
   }
 
   public obtenerDatosedu():Observable<Educacion> {

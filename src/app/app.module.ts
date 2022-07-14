@@ -16,7 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,8 @@ import { ReactiveFormsModule } from '@angular/forms';
       
     }),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

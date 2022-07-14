@@ -26,16 +26,16 @@ export class TokenService {
     window.sessionStorage.setItem(USERNAME_KEY, userName);
   }
 
-  public getUsername():string {
+  public getUsername(): string {
     return sessionStorage.getItem(USERNAME_KEY)!;
   }
 
-  public setAuthorities(authorities: string): void {
+  public setAuthorities(authorities: string[]): void {
     window.sessionStorage.removeItem(AUTHORITIES_KEY);
     window.sessionStorage.setItem(AUTHORITIES_KEY, JSON.stringify(authorities));
   }
 
-  public getAuthorities():string[] {
+  public getAuthorities(): string[] {
     this.roles = [];
     if(sessionStorage.getItem(AUTHORITIES_KEY)){
       JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((authority:any) => {
