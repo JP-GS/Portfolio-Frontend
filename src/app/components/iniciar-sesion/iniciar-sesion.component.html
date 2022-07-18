@@ -1,6 +1,7 @@
 <form
   #f="ngForm"
   (ngSubmit)="onLogin()"
+  novalidate
   class="vh-100"
   style="background-image: linear-gradient(120deg, #a1c4fd 0%, #2c6e8d 100%)"
 >
@@ -24,12 +25,13 @@
                 [ngClass]="{}"
                 type="email"
                 id="nombreUsuario"
+                name="nombreUsuario"
                 class="form-control form-control-lg"
                 placeholder="Email"
                 formControlName="email"
-                name="nombreUsuario"
                 for="nombreUsuario"
                 [(ngModel)]="nombreUsuario"
+                required
               />
               <div>
                 <p>El Email es requerido.</p>
@@ -48,6 +50,7 @@
                 name="password"
                 for="password"
                 [(ngModel)]="password"
+                required
               />
               <div>
                 <p>La contraseña es requerida.</p>

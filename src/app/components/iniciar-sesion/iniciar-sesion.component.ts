@@ -12,7 +12,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class IniciarSesionComponent implements OnInit {
   isLogged = false;
-  siLogginFail = false;
+  isLogginFail = false;
   loginUsuario!: LoginUsuario;
   nombreUsuario!: string;
   password!: string;
@@ -26,7 +26,7 @@ export class IniciarSesionComponent implements OnInit {
   ngOnInit(): void {    
     if(this.tokenService.getToken()) {
       this.isLogged = true;
-      this.siLogginFail = false;
+      this.isLogginFail = false;
       this.roles = this.tokenService.getAuthorities();
     }
   }
@@ -34,7 +34,7 @@ export class IniciarSesionComponent implements OnInit {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
     this.authService.login(this.loginUsuario).subscribe(data => {
         this.isLogged = true;
-        this.siLogginFail = false;
+        this.isLogginFail = false;
         this.tokenService.setToken(data.token);
         this.tokenService.setUsername(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
@@ -42,7 +42,7 @@ export class IniciarSesionComponent implements OnInit {
         this.router.navigate(['']);
       }, err => {
         this.isLogged = false;
-        this.siLogginFail = true;
+        this.isLogginFail = true;
         this.errMsj = err.error.mensaje;
         console.log(this.errMsj);
       })
