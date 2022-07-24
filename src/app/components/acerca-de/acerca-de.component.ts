@@ -12,7 +12,7 @@ export class AcercaDeComponent implements OnInit {
   constructor(public portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
-    this.portfolioService.obtenerDatosPersona().subscribe( data => {this.persona = data})
+    this.portfolioService.obtenerDatosPersona().subscribe( data => {this.persona = data});
   }
 
 }

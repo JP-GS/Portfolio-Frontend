@@ -18,7 +18,7 @@ export class PortfolioService {
     return this.http.get<Persona>(this.UrlPersona + 'traer/1');    
   }
 
-  public obtenerDatosedu():Observable<Educacion> {
+  public obtenerDatosEdu():Observable<Educacion> {
     return this.http.get<Educacion>(this.UrlEducacion + 'traer');
   }
   
