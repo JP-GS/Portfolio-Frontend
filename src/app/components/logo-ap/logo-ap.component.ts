@@ -21,8 +21,7 @@ isLogged = false;
 
   onLogOut():void {
     this.tokenService.logOut();
-    // window.location.reload();
-    this.router.navigate(['login']);
+    window.location.reload();
   }
 
   login() {
