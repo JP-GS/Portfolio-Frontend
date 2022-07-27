@@ -1,15 +1,65 @@
-<div class="row">
-  <h1>Experiencia Laboral</h1>
-  <div class="contenedor-exp">
-    <ul>
-      <li>
-        <div class="d-flex justify-content-between">
-          <h1 class="text-uppercase fs-3"></h1>
-          <p class="fs-6"></p>
+<div class="contenedor">
+  <h1 class="text-center py-5">Experiencia Laboral</h1>
+
+  <div class="contenedor-exp mt-2 p-0">
+    <ul class="list-group">
+      <li
+        *ngFor="let Experiencia of exp"
+        class="list-group-item bg-light m-2 p-0"
+      >
+        <div class="row">
+          <div
+            class="contenedor-img col-md-4 col-lg-3 d-flex justify-content-center"
+          >
+            <img
+              [src]="Experiencia.imgExp"
+              alt="imagen empresa"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="col-md-8 col-lg-9 p-x3">
+            <div class="d-flex justify-content-between">
+              <h2 class="px-1 mt-2">{{ Experiencia.nombreExp }}</h2>
+
+              <div class="d-flex justify-content-end mb-3 me-3">
+                <button
+                  class="btn btn-light text-muted"
+                  *ngIf="isLogged"
+                  routerLink="/editarExp/{{ Experiencia.id }}"
+                >
+                  <i class="bi bi-pencil botones"></i>
+                </button>
+
+                <button
+                  class="btn btn-light text-muted ms-1"
+                  *ngIf="isLogged"
+                  (click)="delete(Experiencia.id)"
+                >
+                  <i class="bi bi-trash botones"></i>
+                </button>
+              </div>
+            </div>
+            <div class="d-flex">
+              <p class="mb-3 px-1 text-muted">{{ Experiencia.puesto }} /</p>
+              <p class="px-1 text-muted">
+                {{ Experiencia.inicio }} - {{ Experiencia.fin }}
+              </p>
+            </div>
+
+            <p class="px-1" text-muted>{{ Experiencia.descripcion }}</p>
+          </div>
         </div>
-        <p>Puesto: <span class="fw-bolder"> </span></p>
-        <p class="fw-light"></p>
       </li>
     </ul>
+  </div>
+  <div class="btn-nueva-exp d-flex justify-content-center mt-3 mx-3">
+    <button
+      type="button"
+      class="btn btn-dark mb-3"
+      routerLink="/nuevaExperiencia"
+      *ngIf="isLogged"
+    >
+      <i class="bi bi-plus-square"></i> Añadir
+    </button>
   </div>
 </div>

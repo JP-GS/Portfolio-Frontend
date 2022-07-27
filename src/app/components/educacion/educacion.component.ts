@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Educacion } from 'src/app/model/educacion.model';
+// import { Educacion } from 'src/app/model/educacion.model';
 import { PortfolioService } from 'src/app/service/portfolio.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class EducacionComponent implements OnInit {
   constructor(public portfolioService: PortfolioService) { }
   
   ngOnInit(): void {
-    this.portfolioService.obtenerDatosEdu().subscribe(data => {this.educacionList = data}); 
+    // this.portfolioService.obtenerDatosEdu().subscribe(data => {this.educacionList = data}); 
       
   }
 

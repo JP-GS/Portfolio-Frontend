@@ -18,6 +18,8 @@ import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesi
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
+import { FormExpComponent } from './components/experiencia/form-exp.component';
+import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { interceptorProvider } from './service/interceptor-service';
     FooterComponent,
     IniciarSesionComponent,
     HomeComponent,
+    FormExpComponent,
+    EditarExperienciaComponent,
   ],
   imports: [
     BrowserModule,
