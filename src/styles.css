@@ -1,0 +1,51 @@
+:root {
+    --violeta: #624357;
+    --gris-azulado: #374E6B;
+    --celeste: #00BEFF;
+    --celeste-claro: #86B1CC;
+    --gris-osc: #414E57;
+    --amarillo: #F9F871;
+}
+
+body {
+    /* background-image: url(https://cdn.wallpapersafari.com/67/67/Ofd5eA.jpg); */
+    /* background-image: url("https://3y3seo1md7o8303qa48ddzzb-wpengine.netdna-ssl.com/wp-content/uploads/2022/07/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner-scaled.jpg"); */
+    /* background-image: url(https://images.unsplash.com/photo-1644786307847-af6a94d8fc75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8M3wxOTQ4MjgzfHxlbnwwfHx8fA%3D%3D&w=1000&q=80); */
+    background-image: url(https://images.unsplash.com/photo-1502252430442-aac78f397426?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Ym9zcXVlJTIwZGUlMjBwaW5vfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+    /* background-image: linear-gradient(to right bottom, #1a2327, #232d32, #2d383e, #37434a, #414e57); */
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+.violeta {
+    color: var(--violeta);
+}
+.gris {
+    color: var(--gris-azulado);
+}
+.gris-osc {
+    color: var(--gris-osc);
+}
+.celeste {
+    color: var(--celeste);
+}
+.amarillo {
+    color: var(--amarillo);
+}
+.celeste-claro {
+    color: var(--celeste-claro);
+}

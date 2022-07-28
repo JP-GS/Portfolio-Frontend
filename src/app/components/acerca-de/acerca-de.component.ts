@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/model/persona.model';
 import { PortfolioService } from 'src/app/service/portfolio.service';
 
+
 @Component({
   selector: 'app-acerca-de',
   templateUrl: './acerca-de.component.html',

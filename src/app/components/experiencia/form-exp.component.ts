@@ -28,8 +28,11 @@ onCreate():void{
       this.router.navigate(['']);
     }, err => {
       alert("Falló la creacion de la experiencia");
-      // this.router.navigate(['']);
+      this.router.navigate(['']);
     }
     )
+}
+onClose(): void {
+  this.router.navigate(['']);
 }
 }
