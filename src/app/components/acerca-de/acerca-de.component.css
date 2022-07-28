@@ -1,10 +1,12 @@
 .contenedor-acerca-de {
+    padding-top: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 @media(max-width: 768px) {
     .contenedor-acerca-de {
+        padding-top: 20px;
         display:block;
         text-align: center;
     }

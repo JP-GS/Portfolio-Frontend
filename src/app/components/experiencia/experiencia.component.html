@@ -1,16 +1,27 @@
 <div
-  class="contenedor"
-  class="contenedor-exp mt-2 p-0"
+  class="contenedor contenedor-exp mt-4 p-0"
   data-aos="fade-in"
   data-aos-offset="100"
   data-aos-delay="50"
   data-aos-duration="500"
   data-aos-easing="ease-in-out"
-  data-aos-mirror="false"
-  data-aos-once="true"
+  data-aos-mirror="true"
+  data-aos-once="false"
   data-aos-anchor-placement="top-center"
 >
-  <h1 class="text-center py-5 violeta">Experiencia Laboral</h1>
+  <h1 class="text-center pt-5 pb-3 violeta">Experiencia Laboral</h1>
+  <div class="d-flex justify-content-end">
+    <div class="btn-nueva-exp">
+      <button
+        type="button"
+        class="btn btn-outline-light"
+        routerLink="/nuevaExperiencia"
+        *ngIf="isLogged"
+      >
+        <i class="bi bi-plus-square"></i> Añadir
+      </button>
+    </div>
+  </div>
 
   <div>
     <div *ngFor="let Experiencia of exp" class="mt-4 p-0 vidrio">
@@ -57,15 +68,5 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="btn-nueva-exp d-flex justify-content-center mt-3 mx-3">
-    <button
-      type="button"
-      class="btn btn-outline-light mb-3"
-      routerLink="/nuevaExperiencia"
-      *ngIf="isLogged"
-    >
-      <i class="bi bi-plus-square"></i> Añadir
-    </button>
   </div>
 </div>
