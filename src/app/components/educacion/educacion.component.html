@@ -1,1 +1,74 @@
-<h1>Educacion</h1>
+<div
+  class="contenedor-edu mt-4 p-0 fs-5"
+  data-aos="fade-in"
+  data-aos-offset="100"
+  data-aos-delay="50"
+  data-aos-duration="500"
+  data-aos-easing="linear"
+  data-aos-mirror="true"
+  data-aos-once="true"
+  data-aos-anchor-placement="top-center"
+>
+  <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
+    Educación
+  </h1>
+  <div class="d-flex justify-content-end">
+    <div class="btn-nueva-edu">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        routerLink="/nuevaEdu"
+        *ngIf="isLogged"
+      >
+        <i class="bi bi-plus-square"></i> Añadir
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <div *ngFor="let Educacion of educacionList" class="mt-4 p-3 bg-white">
+      <div class="row">
+        <div
+          class="contenedor-img col-md-4 col-lg-3 d-flex justify-content-center"
+        >
+          <img
+            [src]="Educacion.imgEdu"
+            alt="imagen empresa"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-md-8 col-lg-9 p-x3">
+          <div class="d-flex justify-content-between mt-4">
+            <h2 class="px-1 mt-2">{{ Educacion.nombreEdu }}</h2>
+
+            <div class="d-flex justify-content-end mb-3 me-3">
+              <button
+                class="btn btn-outline-dark mt-3"
+                *ngIf="isLogged"
+                routerLink="/editarEdu/{{ Educacion.id }}"
+              >
+                <i class="bi bi-pencil botones"></i>
+              </button>
+
+              <button
+                class="btn btn-outline-dark ms-1 mt-3"
+                *ngIf="isLogged"
+                (click)="delete(Educacion.id)"
+              >
+                <i class="bi bi-trash botones"></i>
+              </button>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="mb-3 px-1 text-secondary">{{ Educacion.titulo }} /</p>
+            <p class="px-1 text-secondary">
+              {{ Educacion.inicio }} - {{ Educacion.fin }}
+            </p>
+          </div>
+
+          <p class="px-1 text-secondary">{{ Educacion.carrera }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

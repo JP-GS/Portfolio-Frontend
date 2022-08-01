@@ -25,15 +25,15 @@ export class ExperienciaComponent implements OnInit {
   cargarExperiencia():void{
     this.experienciaService.traer().subscribe(data => {this.exp = data});
   }
-delete(id? : number) {
-if(id != undefined) {
-  this.experienciaService.delete(id).subscribe(
-    data => {
-      this.cargarExperiencia();
-    }, err => {
-      alert("No se pudo eliminar la experiencia");
-    }
-  )
-}
-}
+  delete(id? : number) {
+  if(id != undefined) {
+    this.experienciaService.delete(id).subscribe(
+      data => {
+        this.cargarExperiencia();
+      }, err => {
+        alert("No se pudo eliminar la experiencia");
+      }
+    )
+  }
+ }
 }

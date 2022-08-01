@@ -1,19 +1,24 @@
-.contenedor {
-    /* background-color: #a1b5cb; */
-}
-.row {
-    margin: 0;
-}
 .contenedor-edu {
     max-width: 90%;
-    margin: 0 auto;
-    
+    margin: 0 auto;    
+}
+@media(min-width: 1400px) {
+    .contenedor-edu {
+        max-width: 60%;
+        margin: 0 auto;    
+    }
 }
 
-li {
-    list-style: none;
+@media(min-width: 768px) {
+    .contenedor-img {
+        height: 230px; 
+        width: 230px;
+    }
+}
+@media(max-width: 768px) {
+    .btn-nueva-edu button {
+    width: 100%;
+    justify-content: center;
+    }
 }
 
-p{
-    margin: 0;
-}

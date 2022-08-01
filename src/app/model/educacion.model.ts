@@ -1,18 +1,18 @@
 export class Educacion {
-    id?: Number;
-    nombre: string;
+    id?: number;
+    nombreEdu: string;
     titulo: string;
-    img: string;
     carrera: string;
+    imgEdu: string;    
     inicio: string;
     fin: string;
     
 
-    constructor(nombre: string, titulo: string, img: string, carrera: string, inicio: string, fin: string ) {
-        this.nombre = nombre;
-        this.titulo = titulo;
-        this.img = img;
+    constructor(nombreEdu: string, titulo: string, carrera: string, imgEdu: string, inicio: string, fin: string ) {
+        this.nombreEdu = nombreEdu;
+        this.titulo = titulo;        
         this.carrera = carrera;
+        this.imgEdu = imgEdu;
         this.inicio = inicio;
         this.fin = fin;
         

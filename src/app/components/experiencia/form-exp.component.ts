@@ -18,21 +18,21 @@ export class FormExpComponent implements OnInit {
 
   constructor(private experienciaService: ExperienciaService, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onCreate():void{
+    const expe = new Experiencia(this.nombreExp, this.puesto, this.descripcion, this.imgExp, this.inicio, this.fin);
+    this.experienciaService.save(expe).subscribe(
+      data => {
+        alert("Experiencia creada"); 
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló la creacion de la experiencia");
+        this.router.navigate(['']);
+      }
+      )
   }
-onCreate():void{
-  const expe = new Experiencia(this.nombreExp, this.puesto, this.descripcion, this.imgExp, this.inicio, this.fin);
-  this.experienciaService.save(expe).subscribe(
-    data => {
-      alert("Experiencia creada"); 
-      this.router.navigate(['']);
-    }, err => {
-      alert("Falló la creacion de la experiencia");
-      this.router.navigate(['']);
-    }
-    )
-}
-onClose(): void {
-  this.router.navigate(['']);
-}
+  onClose(): void {
+    this.router.navigate(['']);
+  }
 }

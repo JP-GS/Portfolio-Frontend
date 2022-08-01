@@ -29,7 +29,7 @@ onUpdate():void{
     data => {
       this.router.navigate(['']);
     }, err => {
-      alert("Error al deitar la experiencia");
+      alert("Error al editar la experiencia");
       this.router.navigate(['']);
     }
   )

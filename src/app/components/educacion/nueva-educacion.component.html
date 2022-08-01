@@ -1,0 +1,102 @@
+<div class="contenedor-formulario">
+  <div class="container formulario">
+    <div class="row">
+      <h1 class="text-center violeta text-uppercase">Crear Nuevo Estudio</h1>
+
+      <div>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <!-- <label for="nombreExp">Nombre de la empresa</label> -->
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="nombreExp"
+              for="nombreExp"
+              name="nombreExp"
+              placeholder="Nombre de la escuela"
+              [(ngModel)]="nombreEdu"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="puesto"
+              for="puesto"
+              name="puesto"
+              placeholder="Título"
+              [(ngModel)]="titulo"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="descripcion"
+              for="descripcion"
+              name="descripcion"
+              placeholder="Carrera"
+              [(ngModel)]="carrera"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="imgExp"
+              for="imgExp"
+              name="imgExp"
+              placeholder="Copia la URL de la imagen"
+              [(ngModel)]="imgEdu"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="inicio"
+              for="inicio"
+              name="inicio"
+              placeholder="Fecha de inicio"
+              [(ngModel)]="inicio"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="fin"
+              for="fin"
+              name="fin"
+              placeholder="Fecha de finalización"
+              [(ngModel)]="fin"
+              required
+            />
+          </div>
+          <div class="d-flex justify-content-end mt-5">
+            <button class="btn btn-outline-light btn-agregar">
+              Agregar Educacion
+            </button>
+            <button
+              type="button"
+              class="btn btn-light ms-3"
+              (click)="onClose()"
+            >
+              Cerrar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

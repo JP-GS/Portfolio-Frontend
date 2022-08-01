@@ -1,14 +1,11 @@
-.contenedor {
-    /* background-color: #a1b5cb;     */
-}
-
 .contenedor-exp {
     max-width: 90%;
-    margin: 0 auto;    
+    margin: 0 auto;   
+    
 }
-@media(min-width: 1240px) {
+@media(min-width: 1400px) {
     .contenedor-exp {
-        max-width: 70%;
+        max-width: 60%;
         margin: 0 auto;    
     }
 }

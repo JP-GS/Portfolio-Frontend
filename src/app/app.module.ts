@@ -20,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
 import { FormExpComponent } from './components/experiencia/form-exp.component';
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia.component';
+import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
+import { EditarEducacionComponent } from './components/educacion/editar-educacion.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
     HomeComponent,
     FormExpComponent,
     EditarExperienciaComponent,
+    NuevaEducacionComponent,
+    EditarEducacionComponent,
   ],
   imports: [
     BrowserModule,

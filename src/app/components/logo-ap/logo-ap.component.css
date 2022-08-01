@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 @media(max-width: 768px) {
@@ -44,9 +45,6 @@ img{
         margin: 20px 10px;
     }
 }
-
-
-
 
 
 

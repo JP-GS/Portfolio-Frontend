@@ -1,33 +1,37 @@
-<div
-  class="contenedor-acerca-de"
-  data-aos="fade-in"
-  data-aos-offset="100"
-  data-aos-delay="50"
-  data-aos-duration="500"
-  data-aos-easing="linear"
-  data-aos-mirror="true"
-  data-aos-once="true"
-  data-aos-anchor-placement="top-center"
->
-  <div class="perfil">
-    <div class="contenedor-foto">
-      <img
-        class="img-fluid"
-        [src]="persona.img"
-        alt="foto-perfil"
-        id="foto-perfil"
-      />
-    </div>
+<div class="contenedor bg-white">
+  <div
+    class="contenedor-acerca-de bg-white p-5 fs-5"
+    data-aos="fade-in"
+    data-aos-offset="100"
+    data-aos-delay="50"
+    data-aos-duration="500"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-center"
+  >
+    <div class="perfil">
+      <div class="contenedor-foto">
+        <img
+          class="img-fluid"
+          [src]="persona.img"
+          alt="foto-perfil"
+          id="foto-perfil"
+        />
+      </div>
 
-    <div class="nombre violeta">
-      <p id="nombre">{{ persona.nombre }} {{ persona.apellido }}</p>
-      <p id="full-stack" class="gris">Full Stack Developer Jr.</p>
+      <div class="nombre">
+        <p class="text-center pt-3 pb-1 text-dark fw-bold text-uppercase">
+          {{ persona.nombre }} {{ persona.apellido }}
+        </p>
+        <p class="text-secondary">Full Stack Developer Jr.</p>
+      </div>
     </div>
-  </div>
-  <div class="descripcion">
-    <span
-      ><h1 class="violeta">Acerca de Mí</h1>
-      <p>{{ persona.descripcion }}</p>
-    </span>
+    <div class="descripcion">
+      <h1 class="text-center pt-0 pb-3 text-dark fw-bold text-uppercase">
+        Acerca de Mi
+      </h1>
+      <p class="text-secondary">{{ persona.descripcion }}</p>
+    </div>
   </div>
 </div>

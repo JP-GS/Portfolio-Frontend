@@ -6,6 +6,7 @@ form {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    z-index: 1;
 }
 
 form::before {
@@ -16,7 +17,7 @@ form::before {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    z-index: -1;
 }
 
 input {
