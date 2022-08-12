@@ -1,0 +1,64 @@
+<div class="contenedor-formulario">
+  <div class="container formulario">
+    <div class="row">
+      <h1 class="text-center text-dark text-uppercase">Crear Nueva Skill</h1>
+
+      <div>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <!-- <label for="nombreSkill">Nombre de la empresa</label> -->
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="nombreSkill"
+              for="nombreSkill"
+              name="nombreSkill"
+              placeholder="Nombre de la escuela"
+              [(ngModel)]="nombreSkill"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="imgSkill"
+              for="imgSkill"
+              name="imgSkill"
+              placeholder="Pega la URL de la imagen"
+              [(ngModel)]="imgSkill"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="number"
+              class="form-control mt-3"
+              id="porcentaje"
+              for="porcentaje"
+              name="porcentaje"
+              placeholder="Porcentaje"
+              [(ngModel)]="porcentaje"
+              required
+            />
+          </div>
+
+          <div class="d-flex justify-content-end mt-5">
+            <button class="btn btn-outline-light btn-agregar">
+              Agregar Skill
+            </button>
+            <button
+              type="button"
+              class="btn btn-light ms-3"
+              (click)="onClose()"
+            >
+              Cerrar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

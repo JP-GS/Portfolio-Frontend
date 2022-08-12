@@ -15,7 +15,7 @@ urlExp = 'http://localhost:8080/experiencia/';
   public traer():Observable<Experiencia[]> {
     return this.httpClient.get<Experiencia[]>(this.urlExp + 'traer');
   }
-  public detail(id: number):Observable<Experiencia> {
+  public getById(id: number):Observable<Experiencia> {
     return this.httpClient.get<Experiencia>(this.urlExp + `traer/${id}`);
   }
   public save(experiencia: Experiencia):Observable<any>{

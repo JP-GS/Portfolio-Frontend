@@ -15,7 +15,7 @@ export class EducacionService {
   public traer():Observable<Educacion[]> {
     return this.httpClient.get<Educacion[]>(this.urlEdu + 'traer');
   }
-  public detail(id: number):Observable<Educacion> {
+  public getById(id: number):Observable<Educacion> {
     return this.httpClient.get<Educacion>(this.urlEdu + `traer/${id}`);
   }
   public save(educacion: Educacion):Observable<any> {

@@ -1,5 +1,5 @@
 footer {
-    background-color:grey;
+    /* background-color:grey; */
 }
 @media(max-width: 1024px) {
     .contenedor-footer {

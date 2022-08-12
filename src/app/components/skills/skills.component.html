@@ -1,110 +1,63 @@
-<div class="row">
-  <h2>Hard & Soft Skills</h2>
-  <div class="circle col-xs-12 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="95"
-      [radius]="100"
-      [imageSrc]="'../assets/html5.png'"
-      [showImage]="true"
-      [imageWidth]="100"
-      [imageHeight]="100"
-      [showUnits]="false"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [animation]="true"
-      [animationDuration]="300"
-    ></circle-progress>
+<div class="pt-5">
+  <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
+    Habilidades
+  </h1>
+  <div class="d-flex justify-content-end caja-btn">
+    <div class="btn-nueva-edu">
+      <button
+        type="button"
+        class="btn btn-dark"
+        routerLink="/nuevaSkill"
+        *ngIf="isLogged"
+      >
+        <i class="bi bi-plus-square"></i> Añadir
+      </button>
+    </div>
   </div>
 
-  <div class="circle col-xs-12 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="100"
-      [imageSrc]="'../assets/css3.png'"
-      [showImage]="true"
-      [imageWidth]="70"
-      [imageHeight]="90"
-      [showUnits]="false"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [animation]="true"
-      [animationDuration]="300"
-    ></circle-progress>
-  </div>
+  <div class="bg-white">
+    <div class="row contenedor-circle bg-white p-5 mt-4">
+      <div
+        class="circle col-xs-12 col-md-4 col-lg-4 col-xl-3 mt-5"
+        *ngFor="let Skill of skillList"
+      >
+        <circle-progress
+          titleColor="#000000"
+          [percent]="Skill.porcentaje"
+          [radius]="80"
+          [outerStrokeWidth]="10"
+          [outerStrokeGradient]="true"
+          outerStrokeColor="#86B1CC"
+          outerStrokeGradientStopColor="#00BEFF"
+          [showInnerStroke]="false"
+          [animation]="true"
+          [showImage]="true"
+          [imageSrc]="Skill.imgSkill"
+          [imageWidth]="80"
+          [imageHeight]="80"
+          [backgroundColor]="'#FFFFFF'"
+          [backgroundPadding]="-10"
+          [animationDuration]="2000"
+        ></circle-progress>
+        <h3 class="text-uppercase fw-bold mt-3">{{ Skill.nombreSkill }}</h3>
+        <div class="d-flex justify-content-center align-item-center mb-5">
+          <button
+            class="btn btn-secondary ms-1"
+            *ngIf="isLogged"
+            routerLink="/editarSkill/{{ Skill.id }}"
+          >
+            <i class="bi bi-pencil botones"></i>
+          </button>
 
-  <div class="circle col-xs-12 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="50"
-      [radius]="100"
-      [imageSrc]="'../assets/angular.png'"
-      [showImage]="true"
-      [imageWidth]="80"
-      [imageHeight]="80"
-      [showUnits]="false"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [animation]="true"
-      [animationDuration]="300"
-    ></circle-progress>
-  </div>
-
-  <div class="circle col-xs-12 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="80"
-      [radius]="100"
-      [imageSrc]="'../assets/react.png'"
-      [showImage]="true"
-      [imageWidth]="80"
-      [imageHeight]="90"
-      [showUnits]="false"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [animation]="true"
-      [animationDuration]="300"
-    ></circle-progress>
-  </div>
-
-  <div class="circle col-xs-12 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="76"
-      [radius]="100"
-      [imageSrc]="'../assets/node.png'"
-      [showImage]="true"
-      [imageWidth]="110"
-      [imageHeight]="110"
-      [showUnits]="false"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [animation]="true"
-      [animationDuration]="300"
-    ></circle-progress>
-  </div>
-
-  <div class="circle col-xs-12 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="80"
-      [radius]="100"
-      [imageSrc]="'../assets/github2.png'"
-      [showImage]="true"
-      [imageWidth]="80"
-      [imageHeight]="80"
-      [showUnits]="false"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#C7E596'"
-      [animation]="true"
-      [animationDuration]="300"
-    ></circle-progress>
+          <button
+            class="btn btn-secondary ms-1"
+            *ngIf="isLogged"
+            (click)="delete(Skill.id)"
+          >
+            <i class="bi bi-trash botones"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

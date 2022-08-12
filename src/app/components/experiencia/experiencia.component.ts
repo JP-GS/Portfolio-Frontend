@@ -9,11 +9,14 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  exp: Experiencia[] = [];
+  exp: Experiencia[] = [];  
 
   constructor(private experienciaService: ExperienciaService, private tokenService: TokenService) { }
-  isLogged = false;
-  ngOnInit(): void {
+
+  isLogged:boolean = false;
+  show:boolean = true;
+  
+  ngOnInit(): void {    
     this.cargarExperiencia();
     if(this.tokenService.getToken()) {
       this.isLogged = true;
@@ -22,8 +25,8 @@ export class ExperienciaComponent implements OnInit {
     }
   }
 
-  cargarExperiencia():void{
-    this.experienciaService.traer().subscribe(data => {this.exp = data});
+  cargarExperiencia():void{  
+    this.experienciaService.traer().subscribe(data => {this.exp = data}); 
   }
   delete(id? : number) {
   if(id != undefined) {

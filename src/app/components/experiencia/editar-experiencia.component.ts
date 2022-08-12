@@ -14,24 +14,24 @@ expLab : Experiencia = null;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.experienciaService.detail(id).subscribe(
+    this.experienciaService.getById(id).subscribe(
       data => {
         this.expLab = data;
       }, err => {
-        alert("Error al editar la ");
+        alert("Error al editar la experiencia");
         this.router.navigate(['']);
       }
     )
   }
-onUpdate():void{
-  const id = this.activatedRouter.snapshot.params['id'];
-  this.experienciaService.update(id, this.expLab).subscribe(
-    data => {
-      this.router.navigate(['']);
-    }, err => {
-      alert("Error al editar la experiencia");
-      this.router.navigate(['']);
-    }
-  )
-}
+  onUpdate():void{
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.experienciaService.update(id, this.expLab).subscribe(
+      data => {
+        this.router.navigate(['']);
+      }, err => {
+        alert("Error al editar la experiencia");
+        this.router.navigate(['']);
+      }
+    )
+  }
 }

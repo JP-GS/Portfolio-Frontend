@@ -18,12 +18,14 @@
 body {
     /* background-image: linear-gradient(to right top, #bebebe, #c9c9c9, #d5d5d5, #e0e0e0, #ececec); */
     /* background-image: url(https://images.unsplash.com/photo-1502252430442-aac78f397426?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Ym9zcXVlJTIwZGUlMjBwaW5vfGVufDB8fDB8fA%3D%3D&w=1000&q=80); */
-    background-image: linear-gradient(to right bottom, #fff403, #ffb600, #ff6853, #ff0098, #f204de);
-    /* background-image: linear-gradient(to bottom, #19d307, #2ead29, #378834, #396437, #364235); */
-    /* background-image: linear-gradient(to bottom, #364235, #3c473b, #434b42, #495048, #50554f); */
+    /* background-image: linear-gradient(to right bottom, #fff403, #ffb600, #ff6853, #ff0098, #f204de); */
+    background-image: linear-gradient(to bottom, #19d307, #2ead29, #378834, #396437, #364235);
+    background-image: linear-gradient(to bottom, #364235, #3c473b, #434b42, #495048, #50554f);
     /* background-image: linear-gradient(to right top, #000000, #151515, #232323, #323232, #414141); */
     /* background-image: linear-gradient(to right top, #e8a7a3, #e8a7a3, #e8a7a3, #e8a7a3, #e8a7a3); */
     /* background-image: linear-gradient(to right top, #e79c98, #e79c98, #e79c98, #e79c98, #e79c98); */
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-position: bottom;
