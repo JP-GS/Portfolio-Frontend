@@ -6,6 +6,8 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
 import { FormExpComponent } from './components/experiencia/form-exp.component';
 import { HomeComponent } from './components/home/home.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { EditarProyectoComponent } from './components/proyecto/editar-proyecto.component';
+import { NuevoProyectoComponent } from './components/proyecto/nuevo-proyecto.component';
 import { EditSkillComponent } from './components/skills/edit-skill.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
 
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'editarExp/:id', component: EditarExperienciaComponent},
   {path: 'editarEdu/:id', component: EditarEducacionComponent},
   {path: 'nuevaSkill', component: NewSkillComponent},
-  {path: 'editarSkill/:id', component: EditSkillComponent}
+  {path: 'editarSkill/:id', component: EditSkillComponent},
+  {path: 'nuevoProyecto', component: NuevoProyectoComponent},
+  {path: 'editarProyecto/:id', component: EditarProyectoComponent}
   // {path : "home"}
   // {path:'', redirectTo: 'login', pathMatch:'full'}
 ];

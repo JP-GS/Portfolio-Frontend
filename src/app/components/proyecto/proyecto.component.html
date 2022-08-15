@@ -1,26 +1,85 @@
-<div class="contenedor">
-  <h1>Proyectos Realizados</h1>
+<div
+  class="contenedor-proyecto my-4 p-0 fs-5"
+  data-aos="fade-in"
+  data-aos-offset="100"
+  data-aos-delay="50"
+  data-aos-duration="500"
+  data-aos-easing="linear"
+  data-aos-mirror="true"
+  data-aos-once="true"
+  data-aos-anchor-placement="top-center"
+>
+  <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
+    Proyectos Realizados
+  </h1>
+  <div class="d-flex justify-content-end">
+    <div class="btn-nuevo-proyecto">
+      <button
+        type="button"
+        class="btn btn-dark"
+        routerLink="/nuevoProyecto"
+        *ngIf="isLogged"
+      >
+        <i class="bi bi-plus-square"></i> Añadir Proyecto
+      </button>
+    </div>
+  </div>
 
   <div>
-    <a href="https://control-gastos-pers.netlify.app/" target="_blank">
-      <div class="contenedor-proyectos row">
-        <div class="contenedor-img col-xs-12 col-sm-12 col-md-4 col-lg-4">
-          <img
-            src="../../../assets/img1.jpg"
-            alt="imagen control de gastos"
-            class="img-fluid img-proyecto"
-          />
+    <div
+      *ngFor="let Proyecto of proyectoList"
+      class="mt-4 p-3 bg-white rounded shadow-sm"
+    >
+      <div class="row">
+        <div
+          class="contenedor-img col-md-4 col-lg-3 d-flex justify-content-center"
+        >
+          <a href="{{ Proyecto.urlP }}" target="_blank">
+            <img
+              [src]="Proyecto.imgP"
+              alt="imagen empresa"
+              class="img-fluid rounded"
+            />
+          </a>
         </div>
-        <div class="contenedor-text col-xs-12 col-sm-12 col-md-7 col-lg-7">
-          <h2>Control de gastos</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
-            cumque aut sapiente. Blanditiis nemo tempore doloremque eius iusto!
-            Saepe molestias architecto quam eius maiores quas mollitia possimus
-            a numquam cumque.
-          </p>
+
+        <div class="col-md-8 col-lg-9 p-x3">
+          <div class="d-flex justify-content-between">
+            <h2 class="px-1 mt-2 text-dark fw-black">
+              {{ Proyecto.nombreP }}
+            </h2>
+
+            <div class="d-flex justify-content-end mb-3 me-3">
+              <button
+                class="btn btn-secondary mt-3"
+                *ngIf="isLogged"
+                routerLink="/editarProyecto/{{ Proyecto.id }}"
+              >
+                <i class="bi bi-pencil botones"></i>
+              </button>
+
+              <button
+                class="btn btn-secondary ms-1 mt-3"
+                *ngIf="isLogged"
+                (click)="delete(Proyecto.id)"
+              >
+                <i class="bi bi-trash botones"></i>
+              </button>
+            </div>
+          </div>
+
+          <p class="px-1 text-secondary">{{ Proyecto.descripcionP }}</p>
+        </div>
+        <div class="d-flex justify-content-end pe-5">
+          <a
+            class="btn btn-dark btn-visita"
+            href="{{ Proyecto.urlP }}"
+            target="_blank"
+          >
+            Visitar
+          </a>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </div>
