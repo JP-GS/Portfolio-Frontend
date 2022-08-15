@@ -1,81 +1,101 @@
-<div class="container" *ngIf="expLab">
-  <div class="row">
-    <h1>Editar Experiencia Laboral</h1>
-    <div>
-      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="form-group">
-          <label for="nombreExp">Nombre d la empresa</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nombreExp"
-            name="nombreExp"
-            [(ngModel)]="expLab.nombreExp"
-            required
-          />
-        </div>
+<div class="contenedor-formulario">
+  <div class="container formulario">
+    <div class="row">
+      <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
+        Editar Experiencia
+      </h1>
 
-        <div class="form-group">
-          <label for="puesto">puesto o cargo</label>
-          <input
-            type="text"
-            class="form-control"
-            id="puesto"
-            name="puesto"
-            [(ngModel)]="expLab.puesto"
-            required
-          />
-        </div>
+      <div>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="nombreExp"
+              for="nombreExp"
+              name="nombreExp"
+              placeholder="Nombre de la empresa"
+              [(ngModel)]="expLab.nombreExp"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="descripcion">Descripcion de la esperiencia</label>
-          <input
-            type="text"
-            class="form-control"
-            id="descripcion"
-            name="descripcion"
-            [(ngModel)]="expLab.descripcion"
-            required
-          />
-        </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="puesto"
+              for="puesto"
+              name="puesto"
+              placeholder="Puesto o Cargo"
+              [(ngModel)]="expLab.puesto"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="imgExp">Url de la imagen</label>
-          <input
-            type="text"
-            class="form-control"
-            id="imgExp"
-            name="imgExp"
-            [(ngModel)]="expLab.imgExp"
-            required
-          />
-        </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="descripcion"
+              for="descripcion"
+              name="descripcion"
+              placeholder="Descripción"
+              [(ngModel)]="expLab.descripcion"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="inicio">Fecha de inicio</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inicio"
-            name="inicio"
-            [(ngModel)]="expLab.inicio"
-            required
-          />
-        </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="imgExp"
+              for="imgExp"
+              name="imgExp"
+              placeholder="Copia la url de la imagen"
+              [(ngModel)]="expLab.imgExp"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="fin">Fecha de finalizacion</label>
-          <input
-            type="text"
-            class="form-control"
-            id="fin"
-            name="fin"
-            [(ngModel)]="expLab.fin"
-            required
-          />
-        </div>
-        <button class="btn btn-primary">Guardar Cambios</button>
-      </form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="inicio"
+              for="inicio"
+              name="inicio"
+              placeholder="Fecha de inicio"
+              [(ngModel)]="expLab.inicio"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="fin"
+              for="fin"
+              name="fin"
+              placeholder="Fecha de finalización"
+              [(ngModel)]="expLab.fin"
+              required
+            />
+          </div>
+          <div class="d-flex justify-content-end mt-5">
+            <button class="btn btn-dark btn-agregar">Guardar Cambios</button>
+            <button
+              type="button"
+              class="btn btn-light ms-3"
+              (click)="onClose()"
+            >
+              Cerrar
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

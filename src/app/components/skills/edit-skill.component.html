@@ -1,49 +1,62 @@
-<div class="container" *ngIf="skill">
-  <div class="row">
-    <h1>Editar Habilidad</h1>
-    <div>
-      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            id="nombreSkill"
-            for="nombreSkill"
-            name="nombreSkill"
-            placeholder="Nombre de la habilidad"
-            [(ngModel)]="skill.nombreSkill"
-            required
-          />
-        </div>
+<div class="contenedor-formulario">
+  <div class="container formulario">
+    <div class="row">
+      <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
+        Editar Habilidad
+      </h1>
 
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            id="imgSkill"
-            for="imgSkill"
-            name="imgSkill"
-            placeholder="Pega aquí la URL de la imagen de la skill"
-            [(ngModel)]="skill.imgSkill"
-            required
-          />
-        </div>
+      <div>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="nombreSkill"
+              for="nombreSkill"
+              name="nombreSkill"
+              placeholder="Nombre de la habilidad"
+              [(ngModel)]="skill.nombreSkill"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <input
-            type="number"
-            class="form-control"
-            id="porcentaje"
-            for="porcentaje"
-            name="porcentaje"
-            placeholder="Porcentaje del conocimiento, ej: 99%"
-            [(ngModel)]="skill.porcentaje"
-            required
-          />
-        </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="imgSkill"
+              for="imgSkill"
+              name="imgSkill"
+              placeholder="Pega aquí la URL de la imagen de la skill"
+              [(ngModel)]="skill.imgSkill"
+              required
+            />
+          </div>
 
-        <button class="btn btn-primary">Guardar Cambios</button>
-      </form>
+          <div class="form-group">
+            <input
+              type="number"
+              class="form-control mt-3"
+              id="porcentaje"
+              for="porcentaje"
+              name="porcentaje"
+              placeholder="Porcentaje del conocimiento, ej: 99%"
+              [(ngModel)]="skill.porcentaje"
+              required
+            />
+          </div>
+          <div class="d-flex justify-content-end mt-5">
+            <button class="btn btn-dark btn-agregar">Guardar Cambios</button>
+            <button
+              type="button"
+              class="btn btn-light ms-3"
+              (click)="onClose()"
+            >
+              Cerrar
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

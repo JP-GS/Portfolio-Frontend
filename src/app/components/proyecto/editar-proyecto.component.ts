@@ -36,4 +36,7 @@ proyecto : Proyecto = null;
     )
   }
 
+  onClose(): void {
+    this.router.navigate(['']);
+  }
 }

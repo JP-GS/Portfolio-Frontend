@@ -38,4 +38,7 @@ skill: Skill = null;
     )
   }
 
+  onClose(): void {
+    this.router.navigate(['']);
+  }
 }

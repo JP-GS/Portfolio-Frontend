@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;    
+    height: 100vh;
 }
 .formulario {
     max-width: 50%;
@@ -24,9 +24,4 @@
     .btn-agregar {
         width: 100%;
     }
-}
-input {
-    padding: 10px;
-background-color: rgba(255, 255, 255, 0);
-border-color: rgba(255, 255, 255, 0.3);
 }

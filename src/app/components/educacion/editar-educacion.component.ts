@@ -35,4 +35,8 @@ export class EditarEducacionComponent implements OnInit {
       }
     )
   }
+
+  onClose(): void {
+    this.router.navigate(['']);
+  }
 }

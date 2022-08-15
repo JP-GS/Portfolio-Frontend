@@ -1,19 +1,20 @@
 <div class="contenedor-formulario">
   <div class="container formulario">
     <div class="row">
-      <h1 class="text-center violeta text-uppercase">Crear Nuevo Estudio</h1>
+      <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
+        Crear Nuevo Estudio
+      </h1>
 
       <div>
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
           <div class="form-group">
-            <!-- <label for="nombreExp">Nombre de la empresa</label> -->
             <input
               type="text"
               class="form-control mt-3"
-              id="nombreExp"
-              for="nombreExp"
-              name="nombreExp"
-              placeholder="Nombre de la escuela"
+              id="nombreEdu"
+              for="nombreEdu"
+              name="nombreEdu"
+              placeholder="Nombre de la Institucion"
               [(ngModel)]="nombreEdu"
               required
             />
@@ -23,9 +24,9 @@
             <input
               type="text"
               class="form-control mt-3"
-              id="puesto"
-              for="puesto"
-              name="puesto"
+              id="titulo"
+              for="titulo"
+              name="titulo"
               placeholder="Título"
               [(ngModel)]="titulo"
               required
@@ -36,9 +37,9 @@
             <input
               type="text"
               class="form-control mt-3"
-              id="descripcion"
-              for="descripcion"
-              name="descripcion"
+              id="carrera"
+              for="carrera"
+              name="carrera"
               placeholder="Carrera"
               [(ngModel)]="carrera"
               required
@@ -49,9 +50,9 @@
             <input
               type="text"
               class="form-control mt-3"
-              id="imgExp"
-              for="imgExp"
-              name="imgExp"
+              id="imgEdu"
+              for="imgEdu"
+              name="imgEdu"
               placeholder="Copia la URL de la imagen"
               [(ngModel)]="imgEdu"
               required
@@ -84,9 +85,7 @@
             />
           </div>
           <div class="d-flex justify-content-end mt-5">
-            <button class="btn btn-outline-light btn-agregar">
-              Agregar Educacion
-            </button>
+            <button class="btn btn-dark btn-agregar">Agregar Estudio</button>
             <button
               type="button"
               class="btn btn-light ms-3"

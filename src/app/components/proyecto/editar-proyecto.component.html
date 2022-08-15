@@ -1,57 +1,75 @@
-<div class="container" *ngIf="proyecto">
-  <div class="row">
-    <h1>Editar Proyecto</h1>
-    <div>
-      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="form-group">
-          <label for="nombreP">Nombre del Proyecto</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nombreP"
-            name="nombreP"
-            [(ngModel)]="proyecto.nombreP"
-            required
-          />
-        </div>
+<div class="contenedor-formulario">
+  <div class="container formulario">
+    <div class="row">
+      <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
+        Editar Proyecto
+      </h1>
 
-        <div class="form-group">
-          <label for="imgP">Título</label>
-          <input
-            type="text"
-            class="form-control"
-            id="imgP"
-            name="imgP"
-            [(ngModel)]="proyecto.imgP"
-            required
-          />
-        </div>
+      <div>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="nombreP"
+              name="nombreP"
+              for="nombreP"
+              placeholder="Nombre del proyecto"
+              [(ngModel)]="proyecto.nombreP"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="descripcionP">Descripcion del proyecto</label>
-          <input
-            type="text"
-            class="form-control"
-            id="descripcionP"
-            name="descripcionP"
-            [(ngModel)]="proyecto.descripcionP"
-            required
-          />
-        </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="imgP"
+              name="imgP"
+              for="imgP"
+              placeholder="Pega la url de la imagen"
+              [(ngModel)]="proyecto.imgP"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="urlP">Url del proyecto</label>
-          <input
-            type="text"
-            class="form-control"
-            id="urlP"
-            name="urlP"
-            [(ngModel)]="proyecto.urlP"
-            required
-          />
-        </div>
-        <button class="btn btn-primary">Guardar Cambios</button>
-      </form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="descripcionP"
+              name="descripcionP"
+              for="descripcionP"
+              placeholder="Describe tu proyecto"
+              [(ngModel)]="proyecto.descripcionP"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="urlP"
+              name="urlP"
+              for="urlP"
+              placeholder="Pega la url del proyecto"
+              [(ngModel)]="proyecto.urlP"
+              required
+            />
+          </div>
+          <div class="d-flex justify-content-end mt-5">
+            <button class="btn btn-dark btn-agregar">Guardar Cambios</button>
+            <button
+              type="button"
+              class="btn btn-light ms-3"
+              (click)="onClose()"
+            >
+              Cerrar
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

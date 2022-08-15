@@ -34,4 +34,8 @@ expLab : Experiencia = null;
       }
     )
   }
+
+  onClose(): void {
+    this.router.navigate(['']);
+  }
 }
