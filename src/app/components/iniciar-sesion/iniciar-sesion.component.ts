@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/service/auth.service';
@@ -27,8 +26,9 @@ export class IniciarSesionComponent implements OnInit {
     if(this.tokenService.getToken()) {
       this.isLogged = true;
       this.isLogginFail = false;
-      this.roles = this.tokenService.getAuthorities();
+      this.roles = this.tokenService.getAuthorities();      
     }
+   
   }
   onLogin(): void{
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
@@ -46,5 +46,8 @@ export class IniciarSesionComponent implements OnInit {
         this.errMsj = err.error.mensaje;
         console.log(this.errMsj);
       })
+  }
+  onClose(): void {
+    this.router.navigate(['']);
   }
 }

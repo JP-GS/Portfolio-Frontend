@@ -4,15 +4,9 @@
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="vidrio">
           <div class="card-body p-5 text-center">
-            <div class="d-flex justify-content-end">
-              <a href="">
-                <img
-                  src="../../../assets/circle-xmark-solid.png"
-                  alt="icono-close"
-                />
-              </a>
-            </div>
-            <h3 class="mb-5 azul-fulano">Iniciar Sesión</h3>
+            <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
+              Iniciar Sesión
+            </h1>
 
             <div class="form-outline mb-4">
               <input
@@ -20,10 +14,13 @@
                 id="nombreUsuario"
                 name="nombreUsuario"
                 class="form-control form-control-lg"
-                placeholder="Nombre de Usuario"
+                placeholder="Usuario: admin"
                 for="nombreUsuario"
                 [(ngModel)]="nombreUsuario"
                 required
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="admin"
               />
             </div>
             <div class="form-outline mb-4">
@@ -31,17 +28,28 @@
                 type="password"
                 id="password"
                 class="form-control form-control-lg"
-                placeholder="Contraseña"
+                placeholder="Contraseña: admin"
                 for="password"
                 name="password"
                 [(ngModel)]="password"
                 required
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="admin"
               />
             </div>
-
-            <button class="btn btn-primary btn-lg btn-block" type="submit">
-              Ingresar
-            </button>
+            <div class="d-flex justify-content-end mt-5">
+              <button class="btn btn-dark btn-lg btn-block" type="submit">
+                Ingresar
+              </button>
+              <button
+                type="button"
+                class="btn btn-light ms-3"
+                (click)="onClose()"
+              >
+                Cerrar
+              </button>
+            </div>
           </div>
         </div>
       </div>
