@@ -26,6 +26,7 @@ import { NewSkillComponent } from './components/skills/new-skill.component';
 import { EditSkillComponent } from './components/skills/edit-skill.component';
 import { EditarProyectoComponent } from './components/proyecto/editar-proyecto.component';
 import { NuevoProyectoComponent } from './components/proyecto/nuevo-proyecto.component';
+import { EditarPerfilComponent } from './components/acerca-de/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { NuevoProyectoComponent } from './components/proyecto/nuevo-proyecto.com
     EditSkillComponent,
     EditarProyectoComponent,
     NuevoProyectoComponent,
+    EditarPerfilComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,4 @@
 .contenedor-acerca-de {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 80%;
     margin: 0 auto;
 }
@@ -28,17 +25,18 @@
     
 }
     #foto-perfil {        
-        width: 150px;
-        border-radius: 50%;       
+        width: 200px;
+        border-radius: 50%; 
+        margin-top: -170px; 
     }
-    @media(min-width: 768px) {
+
+    @media(max-width: 768px) {
         #foto-perfil {        
-            width: 100px;        
+            margin-top: 0px;                 
         }
     }
     
-#nombre {
-    
+#nombre {        
     font-weight: bold;
 }
 
@@ -57,3 +55,6 @@ h1 {
     color: #858585;
 }
 
+span{
+    font-weight: bold;
+}

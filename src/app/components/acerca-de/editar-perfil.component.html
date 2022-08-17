@@ -1,0 +1,85 @@
+<div class="contenedor-formulario">
+  <div class="container formulario">
+    <div class="row">
+      <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
+        Editar Perfil
+      </h1>
+
+      <div>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="nombrePers"
+              for="nombrePers"
+              name="nombrePers"
+              placeholder="Tu Nombre"
+              [(ngModel)]="persona.nombrePers"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="apellido"
+              for="apellido"
+              name="apellido"
+              placeholder="Tu Apellido"
+              [(ngModel)]="persona.apellido"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <!-- <input
+              type="text"
+              class="form-control mt-3"
+              id="descripcion"
+              for="descripcion"
+              name="descripcion"
+              placeholder="Escribe algo sobre tí"
+              [(ngModel)]="persona.descripcion"
+              required
+            /> -->
+            <textarea
+              name="descripcion"
+              id="descripcion"
+              for="descripcion"
+              [(ngModel)]="persona.descripcion"
+              class="form-control mt-3"
+            >
+Escribe algo sobre tí</textarea
+            >
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-3"
+              id="img"
+              for="img"
+              name="img"
+              placeholder="Copia la url de la imagen"
+              [(ngModel)]="persona.img"
+              required
+            />
+          </div>
+
+          <div class="d-flex justify-content-end mt-5">
+            <button class="btn btn-dark btn-agregar">Guardar Cambios</button>
+            <button
+              type="button"
+              class="btn btn-light ms-3"
+              (click)="onClose()"
+            >
+              Cerrar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

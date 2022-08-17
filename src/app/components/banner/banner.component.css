@@ -1,9 +1,9 @@
-div{
+.contenedor{
     /* background-color: #373737; */
     background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
     height: 300px;
     width: 100%;
-    height: 400px;
+    height: 500px;
     margin: 0 auto -70px auto;
 } 
 
