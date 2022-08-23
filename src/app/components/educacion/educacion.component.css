@@ -1,6 +1,7 @@
 .contenedor-edu {
-    max-width: 90%;
-    margin: 0 auto;    
+    max-width: 80%;
+    margin: 0 auto;   
+    
 }
 @media(min-width: 1400px) {
     .contenedor-edu {
@@ -8,13 +9,19 @@
         margin: 0 auto;    
     }
 }
+.contenedor-img{
+    margin: auto 20px auto 0;
+}
 
 @media(min-width: 768px) {
     .contenedor-img {
-        height: 230px; 
-        width: 230px;
+        max-height: 160px; 
+        max-width: 170px;
     }
 }
+button {
+    max-height: 40px ;
+    }
 @media(max-width: 768px) {
     .btn-nueva-edu button {
     width: 100%;

@@ -5,10 +5,11 @@
 @media(max-width: 992px) {
     .contenedor-acerca-de {
         padding-top: 20px;
-        display:block;
+        flex-direction: column;
         width: 95%;
     }
 }
+
 
 /* Perfil */
 .perfil {
@@ -21,13 +22,12 @@
 }
 
 .contenedor-foto{
-    width: 150px;
-    
+    width: 300px;
 }
-    #foto-perfil {        
-        width: 200px;
+    #foto-perfil {    
+        max-width: 100px;  
+        /* margin-top: -250px; */
         border-radius: 50%; 
-        margin-top: -170px; 
     }
 
     @media(max-width: 768px) {
@@ -42,6 +42,7 @@
 
 /* acerca de */
 h1 {
+
 }
 .descripcion {
     margin: 0 auto; 

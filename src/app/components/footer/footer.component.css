@@ -1,6 +1,3 @@
-footer {
-    /* background-color:grey; */
-}
 @media(max-width: 1024px) {
     .contenedor-footer {
         flex-direction: column-reverse;
