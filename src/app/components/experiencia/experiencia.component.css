@@ -12,9 +12,6 @@
 .contenedor-img{
     margin: auto 20px auto 0;
 }
-.fecha {
-    min-width: 150px;
-}
 
 @media(min-width: 768px) {
     .contenedor-img {
