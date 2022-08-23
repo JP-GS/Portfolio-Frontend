@@ -26,7 +26,6 @@
 }
     #foto-perfil {    
         max-width: 100px;  
-        /* margin-top: -250px; */
         border-radius: 50%; 
     }
 
@@ -41,9 +40,6 @@
 }
 
 /* acerca de */
-h1 {
-
-}
 .descripcion {
     margin: 0 auto; 
 }
