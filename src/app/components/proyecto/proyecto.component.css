@@ -1,34 +1,32 @@
 .contenedor-proyecto {
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;   
     
 }
 @media(min-width: 1400px) {
     .contenedor-proyecto {
         max-width: 60%;
-        margin: 0 auto;    
+        margin: 0 auto;
+        padding: 20px;    
     }
+}
+.contenedor-img{
+    margin: auto 20px auto 0;
 }
 
 @media(min-width: 768px) {
     .contenedor-img {
-        max-height: 250px; 
-        max-width: 250px;
+        max-width:160px;
+        height:170px;
     }
 }
+button {
+    max-height: 40px ;
+    }
 @media(max-width: 768px) {
-    .btn-nuevo-proyecto button {
+    .btn-nueva-proyecto button {
     width: 100%;
     justify-content: center;
-    }
-}
-a {
-    list-style: none;
-    text-decoration: none;
-}
-@media(max-width: 768px) {
-    .btn-visita {
-        width: 100%;
     }
 }
 

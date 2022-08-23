@@ -8,8 +8,8 @@ import { Persona } from '../model/persona.model';
 })
 export class PersonaService {
 
-  urlPersona:String = 'https://portfoliojpgs.herokuapp.com/persona/';
-  // urlPersona:String = 'http://localhost:8080/persona/';
+  // urlPersona:String = 'https://portfoliojpgs.herokuapp.com/persona/';
+  urlPersona:String = 'http://localhost:8080/persona/';
 
   constructor(private httpClient: HttpClient) { }
 
