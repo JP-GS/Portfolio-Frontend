@@ -13,10 +13,10 @@ import { EditSkillComponent } from './components/skills/edit-skill.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
 
 const routes: Routes = [
-  {path:'' , redirectTo: 'home', pathMatch:'full'},
-  {path:'home', component: HomeComponent},
-  {path:'login', component: IniciarSesionComponent},
-  {path:'editarPerfil/:id', component: EditarPerfilComponent},
+  {path: '' , redirectTo: 'home', pathMatch:'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'login', component: IniciarSesionComponent},
+  {path: 'editarPerfil/:id', component: EditarPerfilComponent},
   {path: 'nuevaExp', component: FormExpComponent},
   {path: 'editarExp/:id', component: EditarExperienciaComponent},
   {path: 'nuevaEdu', component: NuevaEducacionComponent},  
@@ -25,8 +25,6 @@ const routes: Routes = [
   {path: 'editarSkill/:id', component: EditSkillComponent},
   {path: 'nuevoProyecto', component: NuevoProyectoComponent},
   {path: 'editarProyecto/:id', component: EditarProyectoComponent}
-  // {path : "home"}
-  // {path:'', redirectTo: 'login', pathMatch:'full'}
 ];
 
 @NgModule({

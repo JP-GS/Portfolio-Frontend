@@ -15,7 +15,7 @@ export class AuthService {
   // authURL = 'http://localhost:8080/auth/';
 
   //Entorno de produccion
-  authURL = 'https://portfoliojuanpg.herokuapp.com/auth/'
+  authURL = 'https://portfoliojpgs.herokuapp.com/auth/';
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
