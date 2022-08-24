@@ -19,17 +19,22 @@
         max-width: 170px;
     }
 }
+
+.contenedor-btn {
+    justify-content: end;
+        }
+@media(max-width: 992px) {
+    .contenedor-btn {
+        justify-content: center;
+    }
+}
 button {
     max-height: 40px ;
     }
-@media(max-width: 768px) {
-    .btn-nueva-edu button {
-    width: 100%;
-    justify-content: center;
-    }
-}
+
 @media(max-width: 992px) {
     .fechas{
         flex-direction: column-reverse;
     }
 }
+

@@ -2,13 +2,13 @@
   <h1 class="text-center pt-5 pb-3 text-dark fw-bold text-uppercase">
     Habilidades
   </h1>
-  <div class="d-flex justify-content-end caja-btn">
+  <div class="d-flex contenedor-btn">
     <div class="btn-nueva-edu">
       <button
+        *ngIf="isLogged"
         type="button"
         class="btn btn-dark"
         routerLink="/nuevaSkill"
-        *ngIf="isLogged"
       >
         <i class="bi bi-plus-square"></i> Añadir Tectnología
       </button>

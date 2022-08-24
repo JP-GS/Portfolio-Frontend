@@ -22,6 +22,15 @@
     }
 }
 
+.contenedor-btn {
+    justify-content: end;
+        }
+@media(max-width: 992px) {
+    .contenedor-btn {
+        justify-content: center;
+    }
+}
+
 button {
     max-height: 40px ;
     }

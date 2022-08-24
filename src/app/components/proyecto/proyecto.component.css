@@ -1,8 +1,8 @@
 .contenedor-proyecto {
     max-width: 80%;
-    margin: 0 auto;   
-    
+    margin: 0 auto;    
 }
+
 @media(min-width: 1400px) {
     .contenedor-proyecto {
         max-width: 60%;
@@ -10,6 +10,7 @@
         padding: 20px;    
     }
 }
+
 .contenedor-img{
     margin: auto 20px auto 0;
 }
@@ -20,9 +21,20 @@
         height:170px;
     }
 }
+
+.contenedor-btn {
+    justify-content: end;
+        }
+@media(max-width: 992px) {
+    .contenedor-btn {
+        justify-content: center;
+    }
+}
+
 button {
     max-height: 40px ;
     }
+
 @media(max-width: 768px) {
     .btn-nueva-proyecto button {
     width: 100%;
