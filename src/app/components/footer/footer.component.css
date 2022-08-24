@@ -1,6 +1,5 @@
 @media(max-width: 1024px) {
     .contenedor-footer {
-        flex-direction: column-reverse;
-        
+        flex-direction: column-reverse;        
     }
 }

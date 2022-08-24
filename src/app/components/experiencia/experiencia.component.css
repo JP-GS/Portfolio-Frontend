@@ -3,12 +3,14 @@
     margin: 0 auto;   
     
 }
+
 @media(min-width: 1400px) {
     .contenedor-exp {
         max-width: 60%;
         margin: 0 auto;    
     }
 }
+
 .contenedor-img{
     margin: auto 20px auto 0;
 }
@@ -19,18 +21,20 @@
         max-width: 170px;
     }
 }
+
 button {
     max-height: 40px ;
     }
+
 @media(max-width: 768px) {
     .btn-nueva-exp button {
     width: 100%;
     justify-content: center;
     }
 }
+
 @media(max-width: 992px) {
     .fechas{
         flex-direction: column-reverse;
     }
 }
-

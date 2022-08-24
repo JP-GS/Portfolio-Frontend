@@ -1,9 +1,7 @@
 .contenedor-formulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
 }
+
 .formulario {
     max-width: 50%;
     
@@ -14,6 +12,7 @@
         max-width: 30%;
     }
 }
+
 @media(max-width: 768px) {
     .formulario {
         max-width:80%;

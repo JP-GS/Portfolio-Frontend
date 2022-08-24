@@ -10,8 +10,6 @@
     }
 }
 
-
-/* Perfil */
 .perfil {
     padding: 20px;
     display: flex;
@@ -34,12 +32,7 @@
             margin-top: 0px;                 
         }
     }
-    
-#nombre {        
-    font-weight: bold;
-}
 
-/* acerca de */
 .descripcion {
     margin: 0 auto; 
 }
@@ -50,8 +43,4 @@
 }
 .descripcion p {
     color: #858585;
-}
-
-span{
-    font-weight: bold;
 }

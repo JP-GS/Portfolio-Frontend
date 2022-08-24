@@ -5,8 +5,7 @@ export class Educacion {
     carrera: string;
     imgEdu: string;    
     inicio: string;
-    fin: string;
-    
+    fin: string;    
 
     constructor(nombreEdu: string, titulo: string, carrera: string, imgEdu: string, inicio: string, fin: string ) {
         this.nombreEdu = nombreEdu;
@@ -14,7 +13,6 @@ export class Educacion {
         this.carrera = carrera;
         this.imgEdu = imgEdu;
         this.inicio = inicio;
-        this.fin = fin;
-        
+        this.fin = fin;        
     }
 }
